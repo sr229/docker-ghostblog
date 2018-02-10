@@ -15,7 +15,7 @@ install:
 # Assist with ci test debugging:
 #   - DEBUG=1
 before_script:
-    - image="mmornati/docker-ghostblog"
+    - image="$REGISTRY_IMAGE"
     - if [ -n "$TRAVIS_TAG" ]; then
       image="$image:$TRAVIS_TAG";
       fi
